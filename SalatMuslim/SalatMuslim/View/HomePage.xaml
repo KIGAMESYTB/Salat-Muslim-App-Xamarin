@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SalatMuslim.View.HomePage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="PapayaWhip">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Fill">
+            <FlexLayout Direction="Column" AlignItems="Center" JustifyContent="SpaceEvenly" VerticalOptions="FillAndExpand">
+                <Image Source="imgBg.png"/>
+                <StackLayout>
+                    <StackLayout Margin="0,0,0,50">
+                        <Label Text="Muslim Salat" FontSize="35" TextColor="Maroon" FontAttributes="Bold" TextTransform="Uppercase" HorizontalTextAlignment="Center"/>
+                        <Label Text="The application to know the different prayer times in real time" TextColor="Maroon" FontSize="Subtitle" HorizontalTextAlignment="Center" WidthRequest="300"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Button x:Name="btnStart" Clicked="btnStart_Clicked" Text="Start" BorderColor="Maroon"  BorderWidth="1.5" TextColor="PapayaWhip"
+                            BackgroundColor="Maroon" FontAttributes="Bold" CornerRadius="10" FontSize="Medium" HorizontalOptions="CenterAndExpand" Padding="30,0,30,0" />
+
+                        <Button BorderColor="Maroon" BorderWidth="1.5" CornerRadius="10" FontAttributes="Bold" FontSize="Medium" TextColor="Maroon" Text="settings" Clicked="btnSettings"  BackgroundColor="PapayaWhip"  HorizontalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                    <StackLayout HeightRequest="30">
+                        <ActivityIndicator x:Name="indicatorPageSalat" VerticalOptions="Center" Color="Maroon" HeightRequest="30" HorizontalOptions="Center" WidthRequest="30"/>
+                    </StackLayout>
+                </StackLayout>
+            </FlexLayout>
+            <Label  Text="@kigames" HorizontalTextAlignment="Center" TextColor="Maroon"/>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

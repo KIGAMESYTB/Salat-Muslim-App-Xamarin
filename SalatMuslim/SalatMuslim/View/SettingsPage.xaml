@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SalatMuslim.View.SettingsPage"
+             BackgroundColor="PapayaWhip">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
+            <Frame Margin="20,0,20,0" x:Name="frameConnection" VerticalOptions="Center">
+                <StackLayout>
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Enter a City / Country" HorizontalTextAlignment="Center" FontSize="Title" TextColor="Maroon" Margin="0,0,0,20" />
+                        <Entry x:Name="city" Placeholder="Paris" Keyboard="Text" HorizontalTextAlignment="Center" TextColor="Maroon"/>
+                        <Entry x:Name="country" Placeholder="France" Keyboard="Text" HorizontalTextAlignment="Center" TextColor="Maroon" />
+                        <Button Clicked="btnExecuteApi" Text="To validate" BorderColor="Maroon" BorderWidth="2" BackgroundColor="Maroon" FontSize="Medium" TextColor="PapayaWhip" Margin="0,20,0,0" CornerRadius="20" />
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+            <StackLayout Margin="0,20,0,0" HeightRequest="50">
+                <ActivityIndicator x:Name="ActivityIndicatorConnection" Color="Maroon" HeightRequest="50"/>
+                <Label x:Name="lblError" TextColor="Maroon" HorizontalTextAlignment="Center" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

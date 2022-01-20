@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SalatMuslim.View.InformationSalatPage"
+             BackgroundColor="PapayaWhip"
+             NavigationPage.HasNavigationBar="True">
+    <ContentPage.Content>
+        <FlexLayout Direction="Column" AlignContent="Center" JustifyContent="Center">
+            <Label x:Name="lblDate" FontSize="Title" HorizontalTextAlignment="Center" Margin="20" TextColor="Maroon"/>
+            <Frame  Margin="20,0,20,0" BackgroundColor="WhiteSmoke">
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Midnight : " HorizontalOptions="StartAndExpand" FontSize="Title"/>
+                        <Label  x:Name="lblMidnight" TextColor="Maroon" FontSize="Title"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Imsak : " HorizontalOptions="StartAndExpand"  FontSize="Title"/>
+                        <Label  x:Name="lblImsak" TextColor="Maroon" FontSize="Title"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" >
+                        <Label Text="Fajr : " HorizontalOptions="StartAndExpand" FontSize="Title" />
+                        <Label  x:Name="lblFajr"  TextColor="Maroon" FontSize="Title"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Sunrise : " HorizontalOptions="StartAndExpand" FontSize="Title"/>
+                        <Label  x:Name="lblSunrise" TextColor="Maroon" FontSize="Title"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Dhuhr : " HorizontalOptions="StartAndExpand" FontSize="Title"/>
+                        <Label  x:Name="lblDhuhr" TextColor="Maroon" FontSize="Title"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Asr : " HorizontalOptions="StartAndExpand" FontSize="Title"/>
+                        <Label  x:Name="lblAsr" TextColor="Maroon" FontSize="Title"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Sunset : " HorizontalOptions="StartAndExpand" FontSize="Title"/>
+                        <Label  x:Name="lblSunset" TextColor="Maroon" FontSize="Title"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Maghrib : " HorizontalOptions="StartAndExpand" FontSize="Title"/>
+                        <Label  x:Name="lblMaghrib" TextColor="Maroon" FontSize="Title"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Isha : " HorizontalOptions="StartAndExpand" FontSize="Title"/>
+                        <Label  x:Name="lblIsha" TextColor="Maroon" FontSize="Title"/>
+                    </StackLayout>
+                    
+                </StackLayout>
+            </Frame>
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>

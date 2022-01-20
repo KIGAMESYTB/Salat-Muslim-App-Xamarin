@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SalatMuslim.View.SalatPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="PapayaWhip">
+    <!-- Direction="Column" JustifyContent="Center" -->
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Frame BackgroundColor="Maroon" Margin="20">
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="lblProchaineSalat" Text="" FontSize="Medium" TextColor="PapayaWhip" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center" />
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+            <Frame Margin="20" BackgroundColor="Transparent" HasShadow="False">
+                <StackLayout>
+                    <Label x:Name="lblTime"  FontSize="50" TextColor="Black" HorizontalOptions="CenterAndExpand"/>
+                    <Label x:Name="lblCityCountryInformation" HorizontalTextAlignment="Center" FontSize="Medium"/>
+
+                </StackLayout>
+            </Frame>
+            <ScrollView Orientation="Vertical" HorizontalScrollBarVisibility="Always">
+                <ListView RowHeight="80"  x:Name="list" Margin="20" BackgroundColor="Transparent" SeparatorColor="Black" VerticalScrollBarVisibility="Never">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                                        <StackLayout VerticalOptions="CenterAndExpand">
+                                            <Label TextColor="Maroon" Text="{Binding weekday.en}" FontSize="Medium"/>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label TextColor="Maroon" Text="{Binding day}" FontSize="Medium"/>
+                                            <Label TextColor="Maroon" Text="{Binding month.en}" FontSize="Medium"/>
+                                            <Label TextColor="Maroon" Text="{Binding year}" FontSize="Medium" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                    <Button Text="+ info" AutomationId="{Binding day}" Clicked="btnListViewNavigation" FontSize="Small" VerticalOptions="CenterAndExpand" CornerRadius="5" BackgroundColor="Transparent"
+                                            BorderColor="Maroon" BorderWidth="1.5" TextColor="Maroon" HorizontalOptions="EndAndExpand"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
